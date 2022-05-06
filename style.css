@@ -19,6 +19,7 @@ header{
     padding: 10px;
     border-bottom: 2px solid #000;
     box-shadow: 1px 1px 10px 1px #000;
+    margin-bottom: 45px;
 
 }
 
@@ -67,14 +68,40 @@ a{
     font-size: 25px;
 }
 
+#arrow{
+    font-size: 35px;
+    cursor: pointer;
+    animation: blink 1s steps(5, start) infinite;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+#animation{
+    transition: 300ms;
+}
+
+.rotation{
+    transform: rotate(180deg);
+    transition: 300ms;
+}
+
+.active{
+    display: block !important;
+}
+
 #about p {
     max-width: 600px;
     margin: 0 auto;
 }
 
 .form{
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
+    margin-top: 30px;
     border: 1px transparent #000;
     border-radius: 10px;
     color: #000;
@@ -98,7 +125,26 @@ a{
     
 }
 
-@media(max-width: 565px){
+@media(max-width: 480px){
+    header h2{
+        font-size: 20px;
+        padding: 0 0 0 17px;
+    }
+    header ul{
+        padding: 17px 0 0 0 ;
+    }
+    .container .name h1{
+        font-size: 30px;
+    }
+    .container .name h5{
+        font-size: 15px;
+    }
+
+    #about p{
+        font-size: 15px;
+        text-align: justify;
+    }
+
     .form{
         width: 100%;
     }

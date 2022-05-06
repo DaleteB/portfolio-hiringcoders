@@ -28,14 +28,15 @@
                 <h1>Dalete Pokrywiesky</h1>
                 <h5>Front-End Developer</h5>
             </div>
-            <div id="arrow">
-                <i class="fa-solid fa-angle-down"></i>
+            <div onclick="displayAbout()"  id="arrow">
+                <i id="animation" class="fa-solid fa-angle-down"></i>
             </div>
-            <div id="about m-5">
+            <div style="display: none;" id="about" class="text m-4">
                 <p>
                  My name is Dalete Pokrywiesky, and I am a frontend developer student. 
                  I started my coding journey with SheCodes bootcamp, where I learned about HTML, CSS, JavaScript and React. 
                  My portfolio is compost by 4 final projects, as a web page, weather app, dictionary and my portfolio.
+                 Right now I am studying Programation to Digital Commerce with Gama Academy and Hiring Coders.
                  
 
                 </p>
@@ -55,6 +56,13 @@
             </div>
         </section>
     </main>
-    
+    <script>
+        function displayAbout(){
+            var arrow = document.getElementById("animation");
+            arrow.classList.toggle("rotation");
+            var text = document.getElementById("about");
+            text.classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
